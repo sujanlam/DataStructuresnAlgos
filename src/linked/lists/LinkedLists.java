@@ -3,6 +3,18 @@ package linked.lists;
 import java.util.LinkedList;
 
 public class LinkedLists {
+    public Node reverseList(Node head){
+
+        Node current = head;
+        Node previous = null;
+        while (current != null){
+            Node next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        return previous;
+    }
     public static void main(String[] args) {
         LinkedList<String> linkedList = new LinkedList<>();
         linkedList.push("A");

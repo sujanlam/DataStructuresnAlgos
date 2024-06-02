@@ -13,6 +13,12 @@ public class SortingList {
                 .sorted(Comparator.reverseOrder())
                 .collect(Collectors.toCollection(() ->
                         new PriorityQueue<Integer>(Comparator.reverseOrder())));
+        PriorityQueue<Integer> asc = numbers.stream()
+                .sorted()
+                .collect(Collectors
+                        .toCollection(() ->new PriorityQueue<>()));
+        System.out.println(asc);
+        System.out.println(pqDesc);
         while (!pqDesc.isEmpty()) {
             System.out.println(pqDesc.poll());
         }
