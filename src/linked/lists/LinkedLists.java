@@ -43,5 +43,6 @@ public class LinkedLists {
         linkedList1.addFirst("0");
         linkedList1.add("ZZ");
         System.out.println(linkedList1);
+
     }
 }

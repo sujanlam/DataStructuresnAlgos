@@ -22,5 +22,9 @@ public class SortingList {
         while (!pqDesc.isEmpty()) {
             System.out.println(pqDesc.poll());
         }
+
+        System.out.println(numbers);
+        List<Integer> sortedList = numbers.stream().sorted().collect(Collectors.toList());
+        System.out.println(sortedList);
     }
 }
